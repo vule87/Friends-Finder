@@ -9,12 +9,225 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
     <title>Survey</title>
 </head>
 
 <body>
+    <div class="container-fluid bg-light">
+        <div class="container pt-5 pb-5">
+            <h1 class="text-center text-primary">Survey</h1>
+            <br>
+            <p class="text-center">Take a few moments and answer these questions.
+                <br> Select 5 if you strongly agree with the statements and select 1 if you strongly disagree.
+                <br> Let's get started, your future BFF awaits!</p>
+            <form>
+                <div class="form-group">
+                    <input id="name" type="text" class="form-control" required placeholder="Name (Required)">
+                </div>
 
+                <div class="form-group">
+                    <input id="photo" type="text" class="form-control" required placeholder="Profile Photo (Required)">
+                </div>
+
+                <div class="form-group">
+                    <label for="question1">I love Harry Potter.</label>
+                    <select class="form-control chosen" id="question1" required>
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="question2">I love anime.</label>
+                    <select class="form-control chosen" id="question2" required>
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="question3">I love travel.</label>
+                    <select class="form-control chosen" id="question3" required>
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="question4">I love novels.</label>
+                    <select class="form-control chosen" id="question4" required>
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="question5">I love being weird.</label>
+                    <select class="form-control chosen" id="question5" required>
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="question6">I love technology.</label>
+                    <select class="form-control chosen" id="question6" required>
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="question7">I love programming.</label>
+                    <select class="form-control chosen" id="question7" required>
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="question8">I love Family Guy.</label>
+                    <select class="form-control chosen" id="question8" required>
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="question9">I love DIY projects.</label>
+                    <select class="form-control chosen" id="question9" required>
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="question10">I love gardening.</label>
+                    <select class="form-control" chosen id="question10" required>
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" id="submit" class="btn btn-primary text-center">Submit</button>
+                </div>
+            </form>
+
+            <footer>
+                <div class="container fixed-bottom text-right pb-2 border-top pt-2 bg-light">
+                    <a href="/api/friends">Friends API</a>
+                    <span>|</span>
+                    <a href="https://github.com/vule87/Friends-Finder">GitHub Repo</a>
+                </div>
+            </footer>
+
+            <!-- Modal -->
+            <div id="modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title">New BFF</h1>
+                        </div>
+                        <div class="modal-body">
+                            <h2 id="bff"></h2>
+                            <img id="bffphoto" src="https://pbs.twimg.com/profile_images/1195983117/ugly-fugly_400x400.jpg">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of modal -->
+        </div>
+    </div>
 </body>
 
 </html>
+
+<script type="text/javascript">
+    $("#submit").on("click", function (event) {
+        event.preventDefault();
+        // Form validation
+        var isTrue = true;
+
+        if ($("#name").val() === "" || $("#photo").val() === "" || $(".chosen").val() === "") {
+            isTrue = false
+        };
+
+        if (isTrue === true) {
+            $("#name").val() === "";
+            $("#photo").val() === "";
+            $(".chosen").val() === "";
+
+            var newUser = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                scores: [
+                    $("#question1").val(),
+                    $("#question2").val(),
+                    $("#question3").val(),
+                    $("#question4").val(),
+                    $("#question5").val(),
+                    $("#question6").val(),
+                    $("#question7").val(),
+                    $("#question8").val(),
+                    $("#question9").val(),
+                    $("#question10").val()
+                ]
+            };
+
+            $.post("/api/friends", newUser, function (data) {
+                $("#bff").text(data.name);
+                $("#bffPhoto").attr("src", data.photo);
+                $("#modal").modal("toggle");
+            });
+
+        } else {
+            // If a required field is missing, show alert
+            alert("Please fill out all of your responses");
+        }
+    });
+</script>
