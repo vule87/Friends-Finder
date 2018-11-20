@@ -11,13 +11,13 @@ module.exports = function (app) {
 
     app.post("/api/friends", function (req, res) {
 
-        const user = req.body;
+        let user = req.body;
 
         for (let i = 0; i < user.scores.length; i++) {
             user.scores[i] = parseInt(user.scores[i]);
         }
 
-        const index = 0;
+        let index = 0;
         const minDifference = 50;
 
         for (let i = 0; i < friends.length; i++) {
